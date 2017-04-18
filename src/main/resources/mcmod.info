@@ -1,0 +1,21 @@
+{
+  "modListVersion": 2,
+  "modList": [{
+    "modid": "mcfirstmod",
+    "name": "MC First Mod",
+    "description": "A test mod",
+    "version": "1.10.2-0.0.1",
+    "mcversion": "1.10.2",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [ "Alderoy" ],
+    "credits": "Authored by Alderoy",
+    "logoFile": "",
+    "screenshots": [],
+    "parent": "",
+    "requiredMods": [ "Forge" ],
+    "dependencies": [  ],
+    "dependants": [  ],
+    "useDependencyInformation": true
+  }]
+}

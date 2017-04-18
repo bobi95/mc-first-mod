@@ -12,8 +12,8 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 
 version = "1.10.2-0.0.1"
-group= "com.alderoy.mc-first-mod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "mc-first-mod"
+group= "com.alderoy.mcfirstmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "mcfirstmod"
 
 sourceCompatibility = targetCompatibility = "1.6" // Need this here so eclipse task generates correctly.
 compileJava {
