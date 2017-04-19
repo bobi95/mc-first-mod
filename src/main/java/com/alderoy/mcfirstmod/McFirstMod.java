@@ -1,5 +1,6 @@
 package com.alderoy.mcfirstmod;
 
+import com.alderoy.mcfirstmod.block.ModBlocks;
 import com.alderoy.mcfirstmod.handler.ConfigurationHandler;
 import com.alderoy.mcfirstmod.init.ModItems;
 import com.alderoy.mcfirstmod.proxy.IProxy;
@@ -44,6 +45,7 @@ public class McFirstMod {
         initConfigurationHandler(event);
 
         ModItems.init();
+        ModBlocks.init();
     }
 
     private void initConfigurationHandler(FMLPreInitializationEvent event) {

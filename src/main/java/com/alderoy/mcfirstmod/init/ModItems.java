@@ -1,6 +1,6 @@
 package com.alderoy.mcfirstmod.init;
 
-import com.alderoy.mcfirstmod.item.IItemModelProvider;
+import com.alderoy.mcfirstmod.common.IItemModelProvider;
 import com.alderoy.mcfirstmod.item.ItemBall;
 import com.alderoy.mcfirstmod.item.ModItem;
 import com.alderoy.mcfirstmod.utility.LogHelper;
@@ -14,10 +14,7 @@ public class ModItems {
     public static void init() {
         LogHelper.info("Initializing items");
 
-        GameRegistry.register(ball);
-        if (ball instanceof IItemModelProvider) {
-            ball.registerItemModel();
-        }
+        registerItem(ball);
     }
 
     public static void registerItem(Item item) {

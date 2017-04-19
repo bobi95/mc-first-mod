@@ -19,3 +19,4 @@ run/
 .gradle/
 .ipr
 .iws
+build/
