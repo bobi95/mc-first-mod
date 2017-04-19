@@ -10,6 +10,9 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the nessasary things for Forge to be setup.
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
 
 version = "1.10.2-0.0.1"
 group= "com.alderoy.mcfirstmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
