@@ -12,10 +12,5 @@ public class ModCreativeTabs {
         public Item getTabIconItem() {
             return ModItems.philosopherStone;
         }
-
-        @Override
-        public String getTranslatedTabLabel() {
-            return ModReference.MOD_NAME;
-        }
     };
 }
