@@ -2,6 +2,7 @@ package com.alderoy.mcfirstmod.block;
 
 import com.alderoy.mcfirstmod.McFirstMod;
 import com.alderoy.mcfirstmod.common.IItemModelProvider;
+import com.alderoy.mcfirstmod.common.ModCreativeTabs;
 import com.alderoy.mcfirstmod.reference.ModReference;
 import com.alderoy.mcfirstmod.reference.Textures;
 import net.minecraft.block.Block;
@@ -31,7 +32,7 @@ public abstract class ModBlock extends Block implements IItemModelProvider {
         super(blockMaterialIn, blockMapColorIn);
         this.setRegistryName(ModReference.MOD_ID, name);
         this.setUnlocalizedName(name);
-        this.setCreativeTab(CreativeTabs.MISC);
+        this.setCreativeTab(ModCreativeTabs.MOD_TAB);
         this.setHardness(0.5F);
         this.setResistance(5F);
         this.setSoundType(SoundType.STONE);

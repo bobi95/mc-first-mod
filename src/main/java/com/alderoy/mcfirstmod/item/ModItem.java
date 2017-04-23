@@ -2,6 +2,7 @@ package com.alderoy.mcfirstmod.item;
 
 import com.alderoy.mcfirstmod.McFirstMod;
 import com.alderoy.mcfirstmod.common.IItemModelProvider;
+import com.alderoy.mcfirstmod.common.ModCreativeTabs;
 import com.alderoy.mcfirstmod.reference.ModReference;
 import com.alderoy.mcfirstmod.reference.Textures;
 import net.minecraft.creativetab.CreativeTabs;
@@ -17,7 +18,7 @@ public abstract class ModItem extends Item implements IItemModelProvider {
         this.setUnlocalizedName(unlocalizedName);
         this.setRegistryName(ModReference.MOD_ID, name);
         this.maxStackSize = 1;
-        this.setCreativeTab(CreativeTabs.MISC);
+        this.setCreativeTab(ModCreativeTabs.MOD_TAB);
         this.setNoRepair();
     }
 
