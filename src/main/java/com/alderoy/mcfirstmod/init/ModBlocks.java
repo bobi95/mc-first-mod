@@ -1,5 +1,7 @@
-package com.alderoy.mcfirstmod.block;
+package com.alderoy.mcfirstmod.init;
 
+import com.alderoy.mcfirstmod.block.BlockSquare;
+import com.alderoy.mcfirstmod.block.ModBlock;
 import com.alderoy.mcfirstmod.common.IItemModelProvider;
 import com.alderoy.mcfirstmod.reference.ModReference;
 import com.alderoy.mcfirstmod.utility.LogHelper;

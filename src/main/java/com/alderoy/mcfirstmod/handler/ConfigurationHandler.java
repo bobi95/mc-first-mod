@@ -10,6 +10,10 @@ import java.io.File;
 
 public class ConfigurationHandler {
 
+    public static final ConfigurationHandler instance = new ConfigurationHandler();
+
+    private ConfigurationHandler() {}
+
     private Configuration configuration;
     private boolean configVal = false;
 

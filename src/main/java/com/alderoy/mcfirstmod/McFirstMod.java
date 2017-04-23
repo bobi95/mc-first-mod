@@ -1,6 +1,6 @@
 package com.alderoy.mcfirstmod;
 
-import com.alderoy.mcfirstmod.block.ModBlocks;
+import com.alderoy.mcfirstmod.init.ModBlocks;
 import com.alderoy.mcfirstmod.handler.ConfigurationHandler;
 import com.alderoy.mcfirstmod.init.ModItems;
 import com.alderoy.mcfirstmod.proxy.IProxy;
@@ -11,7 +11,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
 
 @Mod(
@@ -29,16 +28,6 @@ public class McFirstMod {
     @SidedProxy(clientSide = ModReference.CLIENT_PROXY, serverSide = ModReference.SERVER_PROXY)
     public static IProxy proxy;
 
-    private static final AnnotationConfigApplicationContext CONTEXT = new AnnotationConfigApplicationContext(McFirstMod.class);
-
-    public static void register(String name, Object instance) {
-        CONTEXT.getBeanFactory().registerSingleton(name, instance);
-    }
-
-    public static <T> T get(Class<T> type) {
-        return CONTEXT.getBean(type);
-    }
-
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
 
@@ -49,10 +38,9 @@ public class McFirstMod {
     }
 
     private void initConfigurationHandler(FMLPreInitializationEvent event) {
-        final ConfigurationHandler configurationHandler = new ConfigurationHandler();
+        ConfigurationHandler configurationHandler = ConfigurationHandler.instance;
         configurationHandler.init(event.getSuggestedConfigurationFile());
         MinecraftForge.EVENT_BUS.register(configurationHandler);
-        register("configurationHandler", configurationHandler);
     }
 
     @Mod.EventHandler

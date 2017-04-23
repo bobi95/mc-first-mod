@@ -14,12 +14,12 @@ public class ModGuiConfig extends GuiConfig {
         super(
                 parentScreen,
                 new ConfigElement(
-                        McFirstMod.get(ConfigurationHandler.class).getConfiguration()
+                        ConfigurationHandler.instance.getConfiguration()
                                 .getCategory(Configuration.CATEGORY_GENERAL)
                 ).getChildElements(),
                 ModReference.MOD_ID,
                 false,
                 false,
-                GuiConfig.getAbridgedConfigPath(McFirstMod.get(ConfigurationHandler.class).getConfiguration().toString()));
+                GuiConfig.getAbridgedConfigPath(ConfigurationHandler.instance.getConfiguration().toString()));
     }
 }
